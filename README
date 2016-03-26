@@ -6,6 +6,6 @@ rss-from-emails "CVE" http://mail-index.netbsd.org/source-changes/2016/03/ > fee
 Example output:
 http://coypu.sdf.org/feed.xml
 
-I will not maintain this feed.
+I cannot maintain this feed.
 
 License: public domain
