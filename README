@@ -2,3 +2,6 @@ Generate RSS feed of emails in mailing list archive that mention a certain strin
 
 Example usage:
 rss-from-emails "CVE" http://mail-index.netbsd.org/source-changes/2016/03/ > feed.xml
+
+Example output:
+http://coypu.sdf.org/feed.xml
