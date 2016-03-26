@@ -4,8 +4,11 @@ msg="${1}"
 
 if [ -e ${msg} ]; then
 
+	#		text in h1 tag			remove tags
 	title=$(awk '/<h1>/,/<\/h1>/' "${msg}" | sed -e 's|<.\{0,1\}h1>||g')
+	#		text in pre tag				remove tags		first 50 lines
 	contentInPre=$(awk '/<pre>/,/<\/pre>/' "${msg}" | sed -e 's|<.\{0,1\}pre>||g' | awk 'FNR <= 50')
+
 	cat<<-ITEM
 	<item>
 	<title>${title}</title>
