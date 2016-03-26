@@ -3,7 +3,7 @@
 searchString="${1}"
 startingURL="${2}"
 
-#wget --mirror --no-parent "${startingURL}"
+wget --mirror --no-parent "${startingURL}"
 
 cat<<BEGIN
 <?xml version="1.0" encoding="UTF-8" ?>
