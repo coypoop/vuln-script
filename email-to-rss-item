@@ -10,7 +10,7 @@ if [ -e ${msg} ]; then
 	<item>
 	<title>${title}</title>
 	<link>http://${msg}</link>
-	<description>${contentInPre}</description>
+	<description><![CDATA[<pre>${contentInPre}</pre>]]></description>
 	</item>
 	ITEM
 fi
