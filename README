@@ -1,0 +1,4 @@
+Generate RSS feed of emails in mailing list archive that mention a certain string.
+
+Example usage:
+rss-from-emails "CVE" http://mail-index.netbsd.org/source-changes/2016/03/ > feed.xml

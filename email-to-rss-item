@@ -1,0 +1,19 @@
+#!/bin/sh
+
+msg="${1}"
+
+if [ -e ${msg} ]; then
+
+	title=$(awk '/<h1>/,/<\/h1>/' "${msg}" | sed -e 's|<.\{0,1\}h1>||g')
+	contentInPre=$(awk '/<pre>/,/<\/pre>/' "${msg}" | sed -e 's|<.*pre>||g')
+
+	cat<<-ITEM
+	<item>
+	<title>${title}</title>
+	<link>http://${msg}</link>
+	<description>${contentInPre}</description>
+	</item>
+	ITEM
+fi
+
+

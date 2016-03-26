@@ -1,0 +1,19 @@
+#!/bin/sh
+
+searchString="${1}"
+startingURL="${2}"
+
+#wget --mirror --no-parent "${startingURL}"
+
+cat<<BEGIN
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+BEGIN
+
+find * -type f -name "msg*.html" -exec grep -q ${searchString} {} \; -exec sh email-to-rss-item {} \;
+
+cat<<END
+</channel>
+</rss>
+END
